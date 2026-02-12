@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - AI Medical Diagnosis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🏥</span>
+                <h1>AI Medical Diagnosis</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/about" class="active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="about-section">
+            <div class="card">
+                <h2>About AI Medical Diagnosis</h2>
+                
+                <div class="about-content">
+                    <h3>🤖 What is this?</h3>
+                    <p>
+                        AI Medical Diagnosis is an intelligent symptom checker application that uses artificial intelligence 
+                        to analyze your symptoms and provide possible diagnoses along with health recommendations.
+                    </p>
+
+                    <h3>⚡ How it works</h3>
+                    <ol>
+                        <li><strong>Select Symptoms:</strong> Choose from a comprehensive list of common symptoms</li>
+                        <li><strong>AI Analysis:</strong> Our AI system analyzes your symptoms against a medical database</li>
+                        <li><strong>Get Results:</strong> Receive ranked possible diagnoses with match scores and recommendations</li>
+                    </ol>
+
+                    <h3>🎯 Features</h3>
+                    <ul>
+                        <li>Comprehensive symptom database</li>
+                        <li>AI-powered matching algorithm</li>
+                        <li>Detailed health recommendations</li>
+                        <li>Easy-to-use interface</li>
+                        <li>Instant results</li>
+                    </ul>
+
+                    <h3>⚠️ Important Disclaimer</h3>
+                    <div class="warning-box">
+                        <p>
+                            <strong>This application is for educational and informational purposes only.</strong>
+                        </p>
+                        <ul>
+                            <li>It is NOT a substitute for professional medical advice, diagnosis, or treatment</li>
+                            <li>Always seek the advice of your physician or qualified health provider</li>
+                            <li>Never disregard professional medical advice or delay seeking it because of something you read here</li>
+                            <li>If you think you may have a medical emergency, call your doctor or emergency services immediately</li>
+                        </ul>
+                    </div>
+
+                    <h3>🛠️ Technology</h3>
+                    <p>
+                        Built with Flask (Python web framework) and vanilla JavaScript, featuring a clean, 
+                        responsive design and an intelligent matching algorithm that considers symptom overlap 
+                        and confidence scores.
+                    </p>
+
+                    <h3>📚 Database</h3>
+                    <p>
+                        Our system includes information about various common conditions including respiratory 
+                        infections, allergies, gastrointestinal issues, and more. The database is continuously 
+                        being expanded to provide more comprehensive coverage.
+                    </p>
+                </div>
+
+                <div class="cta-section">
+                    <a href="/" class="btn btn-primary">Try Symptom Checker</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI Medical Diagnosis. Educational purposes only.</p>
+        </div>
+    </footer>
+</body>
+</html>
