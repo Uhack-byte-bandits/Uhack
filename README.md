@@ -37,6 +37,11 @@ pip install -r requirements.txt
 python app.py
 ```
 
+For development with debug mode:
+```bash
+FLASK_DEBUG=true python app.py
+```
+
 4. Open your browser and navigate to:
 ```
 http://localhost:5000
