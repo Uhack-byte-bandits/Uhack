@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Medical Diagnosis - Symptom Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo">🏥</span>
+                <h1>AI Medical Diagnosis</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/" class="active">Home</a>
+                <a href="/about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="hero">
+            <h2>AI-Powered Symptom Checker</h2>
+            <p class="subtitle">Select your symptoms to get possible diagnoses and health recommendations</p>
+            <div class="disclaimer">
+                <strong>⚠️ Disclaimer:</strong> This is an educational AI tool and should not replace professional medical advice. 
+                Always consult a healthcare provider for proper diagnosis and treatment.
+            </div>
+        </section>
+
+        <section class="symptom-checker">
+            <div class="card">
+                <h3>Select Your Symptoms</h3>
+                <p class="instruction">Check all symptoms you are currently experiencing:</p>
+                
+                <div class="search-box">
+                    <input type="text" id="symptomSearch" placeholder="🔍 Search symptoms..." />
+                </div>
+
+                <div id="symptomsList" class="symptoms-grid">
+                    {% for symptom in symptoms %}
+                    <label class="symptom-item">
+                        <input type="checkbox" name="symptoms" value="{{ symptom }}" class="symptom-checkbox">
+                        <span class="symptom-label">{{ symptom|title }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+
+                <div class="selected-symptoms">
+                    <h4>Selected Symptoms (<span id="symptomCount">0</span>):</h4>
+                    <div id="selectedSymptomsList" class="selected-list"></div>
+                </div>
+
+                <button id="diagnoseBtn" class="btn btn-primary" disabled>
+                    Get AI Diagnosis
+                </button>
+            </div>
+        </section>
+
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <div class="card">
+                <h3>Diagnosis Results</h3>
+                <div id="resultsContent"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 AI Medical Diagnosis. Educational purposes only.</p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
